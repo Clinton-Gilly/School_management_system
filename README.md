@@ -1,118 +1,112 @@
-School Management System
-Overview
-The School Management System is a web application designed to manage various aspects of school administration. It includes features for students, teachers, and admins to handle tasks such as class management, attendance, grades, announcements, and more.
+# School Management System
 
-Features
-For Admins:
-Add and manage users (students, teachers, admins).
-Manage classes, subjects, and schedules.
-View and generate reports.
-Post announcements and handle issues reported by students.
-For Teachers:
-View and manage classes.
-Mark attendance for students.
-Post class outputs and assignments.
-Send notifications to students.
-Update profile details.
-For Students:
-View class schedules and grades.
-Check attendance records.
-View announcements and submit problems or feedback.
-Update profile details.
-Technology Stack
-Frontend: HTML, CSS (Stylesheets for login and dashboard pages)
-Backend: PHP
-Database: MySQL (or MariaDB)
-Web Server: Apache (part of XAMPP)
-Installation
-Prerequisites
-XAMPP/WAMP: Install XAMPP or WAMP to run Apache and MySQL servers locally.
-PHP: Ensure PHP is installed (comes with XAMPP/WAMP).
-MySQL: Ensure MySQL is installed (comes with XAMPP/WAMP).
-Steps to Install
-Clone the Repository:
+## Overview
 
-bash
-Copy code
-git clone <repository-url>
-Set Up the Database:
+The School Management System is a web application designed to facilitate the management of school operations. This project includes features for students, teachers, and administrators to manage user accounts, classes, attendance, grades, notifications, and more.
 
-Create a new database in MySQL (e.g., school_management).
-Import the provided SQL schema files to create tables:
-sql
-Copy code
--- Run these SQL commands in your MySQL client or phpMyAdmin
-CREATE TABLE users ( ... );
-CREATE TABLE students ( ... );
-CREATE TABLE teachers ( ... );
-CREATE TABLE classes ( ... );
-CREATE TABLE subjects ( ... );
-CREATE TABLE attendance ( ... );
-CREATE TABLE grades ( ... );
-CREATE TABLE schedule ( ... );
-CREATE TABLE announcements ( ... );
-CREATE TABLE problems ( ... );
-CREATE TABLE class_outputs ( ... );
-Configure Database Connection:
+## Features
 
-Open config.php and update the database connection settings:
-php
-Copy code
-<?php
-$host = 'localhost'; // or your server IP
-$db = 'school_management';
-$user = 'root'; // default XAMPP/WAMP MySQL user
-$pass = ''; // default XAMPP/WAMP MySQL password (usually empty)
+- **For Students:**
+  - View and update profile information
+  - Check class schedules
+  - View grades and attendance
+  - Read announcements
+  - Submit homework and assignments
+  - Report problems
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
-}
-?>
-Set Up Your Web Server:
+- **For Teachers:**
+  - Manage classes and students
+  - Mark attendance
+  - Post class outputs and assignments
+  - Send notifications
+  - View and update grades
 
-Place the project folder in the htdocs directory of your XAMPP installation (or www directory of WAMP).
-Start Apache and MySQL from the XAMPP/WAMP control panel.
-Access the Application:
+- **For Admins:**
+  - Manage users (students, teachers, admins)
+  - Manage classes, subjects, and attendance
+  - Generate and view reports
+  - Post announcements
 
-Open your web browser and navigate to http://localhost/<project-folder>.
-Usage
-Login:
+## Installation
 
-Use the login page to access the system. Admins, teachers, and students will be redirected to their respective dashboards based on their roles.
-Admin Dashboard:
+1. **Clone the Repository:**
 
-Manage users, classes, subjects, and view reports.
-Teacher Dashboard:
+    ```bash
+    git clone https://github.com/yourusername/school_management_system.git](https://github.com/Clinton-Gilly/School_management_system.git
+    ```
 
-Mark attendance, post class outputs, and send notifications.
-Student Dashboard:
+2. **Navigate to the Project Directory:**
 
-Check grades, attendance, and view announcements.
-Contributing
-Fork the Repository: Fork the repo on GitHub.
-Clone Your Fork:
-bash
-Copy code
-git clone <your-fork-url>
-Create a Branch:
-bash
-Copy code
-git checkout -b feature-branch
-Make Changes and Commit:
-bash
-Copy code
-git add .
-git commit -m "Add new feature"
-Push Changes:
-bash
-Copy code
-git push origin feature-branch
-Create a Pull Request: Submit a pull request from your branch to the main repository.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+    ```bash
+    cd school_management_system
+    ```
 
-Contact
-For questions or issues, please contact [your-email@example.com].
+3. **Set Up the Database:**
+
+    - Import the provided SQL schema files into your MySQL database.
+    - Update `config.php` with your database credentials.
+
+4. **Install Dependencies:**
+
+    This project uses PHP, so no additional dependencies need to be installed. Ensure you have PHP and MySQL installed on your local server.
+
+5. **Start Your Local Server:**
+
+    Ensure your local server is running. If using XAMPP or MAMP, place the project directory in the `htdocs` (XAMPP) or `htdocs` (MAMP) directory and start the server.
+
+## Usage
+
+1. **Access the Application:**
+
+    Open your browser and navigate to `http://localhost/school_management_system/` to view the application.
+
+2. **Login:**
+
+    - Use the login page to access different user roles: Admin, Teacher, or Student.
+    - For testing, you may need to manually create users with different roles in the database.
+
+3. **Explore Features:**
+
+    - Admins can manage users, classes, subjects, and view reports.
+    - Teachers can mark attendance, post class outputs, and manage assignments.
+    - Students can view their schedules, grades, and report problems.
+
+## Contributing
+
+Contributions are welcome! To contribute to the project:
+
+1. **Fork the Repository:**
+
+    Click on the "Fork" button at the top right of this repository page.
+
+2. **Create a Feature Branch:**
+
+    ```bash
+    git checkout -b feature/your-feature
+    ```
+
+3. **Commit Your Changes:**
+
+    ```bash
+    git commit -am 'Add some feature'
+    ```
+
+4. **Push to the Branch:**
+
+    ```bash
+    git push origin feature/your-feature
+    ```
+
+5. **Create a New Pull Request:**
+
+    Go to the repository on GitHub and click on the "New Pull Request" button.
+
+
+
+## Contact
+
+For any questions or support, please contact:
+
+- **Clinton Kiplagat** - [sungurclinton@gmail.com](mailto:sungurclinton@gmail.com)
+
+
