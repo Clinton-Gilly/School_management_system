@@ -1,0 +1,30 @@
+<!-- layout.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Management System</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>School Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <?php if ($_SESSION['role'] == 'admin') { ?>
+                    <li><a href="admin_dashboard.php">Admin Dashboard</a></li>
+                <?php } elseif ($_SESSION['role'] == 'teacher') { ?>
+                    <li><a href="teacher_dashboard.php">Teacher Dashboard</a></li>
+                <?php } elseif ($_SESSION['role'] == 'student') { ?>
+                    <li><a href="student_dashboard.php">Student Dashboard</a></li>
+                <?php } ?>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Page Content -->
+    </main>
+</body>
+</html>
