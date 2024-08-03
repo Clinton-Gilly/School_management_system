@@ -65,6 +65,10 @@ The School Management System is a web application designed to facilitate the man
     - Use the login page to access different user roles: Admin, Teacher, or Student.
     - For testing, you may need to manually create users with different roles in the database.
 
+      **Login Details**
+      1)Teacher:  Username 'root'
+                  Password  'root'  
+
 3. **Explore Features:**
 
     - Admins can manage users, classes, subjects, and view reports.
